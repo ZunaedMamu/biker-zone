@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  .poppin{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }  
 *{
     text-decoration: none;
     max-width: 1440px;
@@ -6,7 +13,7 @@
    
 }
 .green{
-    background-color: #264653;
+    /* background-color: #264653; */
     color: aliceblue;
 }
 section{
@@ -33,20 +40,36 @@ section{
 .span-clr{
     color:#E76F51;
 }
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap:350px;
+    max-width: 1000px;
+}
+nav>h2{
+    font-size: 2rem;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 800px;
+    color: #E76F51;
+}
 .navbar{
     display: flex;
     /* justify-content: space-between; */
     gap: 50px;
     font-size: 0.8rem;
+    font-weight: 700;
     align-items: center;
     width: 400px;
-    height: 30px;
+    height: 35px;
     margin-top: 20px;
     /* margin: 0 auto; */
     position: relative;
-    margin-right: 100px;
-    border: 2px solid rgba(255, 255, 255, 0.041);
-    border-radius: 16px;
+    margin-right: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    background-color:rgba(255, 255, 255, 0.075) ;
+    /* border-radius: 16px; */
     margin-bottom: 30px;
 
     
@@ -56,7 +79,7 @@ section{
 }
 .navbar a{
     align-items: end;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     color: aliceblue;
     align-items: center;
     text-align: center;
@@ -68,7 +91,7 @@ section{
 .nav1{
     display: flex;
     justify-content: space-between ;
-    gap: 10px;   
+    gap: 5px;   
     
 }
 .nav2{
@@ -77,25 +100,39 @@ section{
     padding: 5px; 
     text-align: center;
     background-color:#E76F51;
-    border-radius: 16px;
+    /* border-radius: 16px; */
 }
 .sec-1{
+    display: flex;
+    flex-direction: column;
     margin-top: 0px;
+    align-items: center;
+    position: relative;
+    background: url(https://img.freepik.com/premium-photo/motorcycle-road-motorcycle-racing-sports-bike-riding-hd-wallpaper_594776-1202.jpg?w=996);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    max-height: 750px;
 }
 .container1{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px;
-    padding:10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    padding:20px;
     align-items: center;
 
 }
 .c1-left{
  max-width: 400px;   
 }
+.c1-right{
+    max-width: 400px;
+}
 .c1-right img{
-   max-width: 550px; 
-   height: 500px;
+ width: 100%; 
+   /* margin-left: -30px;
+   height: 400px;
+   max-width: 450px; */
    filter: drop-shadow(5px 5px 10px yellow);
    
 }
@@ -118,10 +155,11 @@ section{
     color: rgba(255, 0, 0, 0.849);
     text-decoration: underline;
 }
-.sec-3,.sec-4{
+.sec-3,.sec-4,.sec-5{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding:5px;  */
 }
 .c3,.c4{
     text-align: center;
@@ -200,32 +238,171 @@ section{
     text-align: center;
 }
 .container5{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    gap: 30px;
-    margin: 30px;
+    /* justify-content: space-around; */
+    /* padding: 10px; */
+    gap: 80px;
+    /* margin: 30px; */
 }
 .c5-left img{
     width: 100%;
     max-height: 400px;
 }
 .c5-left{
-    max-width: 570px;
+    max-width: 400px;
 }
 .c5-right{
-    border:2px solid #E76F51;
-    height: 300px;
-    width: 100%;
-    background-color: aliceblue;
-    max-width: 570px;
+     max-width: 400px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
 }
+.dropdown img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(235, 233, 233, 0.37);
+    position: relative;
+  
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    border:2px solid rgba(202, 200, 200, 0.534);
+    padding: 10px;
+    min-width: 350px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+.drop-content{
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    height:200px ;
+    width: 400px;
+    padding: 10px;
+    /* margin-top: -10px; */
+    border:2px solid rgba(202, 200, 200, 0.534);
+
+
+}
+.dropdown:after{
+    position: absolute;
+    top: 20px;
+}
+
 /* .user:hover{
     filter: drop-shadow(5px 5px 10px #e76f517c);
 } */
  .footer{
+    display:flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
     background-color: #0B0D17;
     height: 250px;
     margin-top: 30px;
+    color: rgba(245, 245, 245, 0.863);
+    padding: 50px;
+ }
+ .ft-div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    align-items: center;
+
+ }
+ .ft-left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    
+    
+ }
+.left1, .left2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+ .ft-right{
+    max-width: 540px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ .ft-right-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+ }
+.ft-right img{
+    width: 100%;
+}
+.ft-head{
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* text-decoration: underline ; */
+}
+ .footer a{
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 0.8rem;
+    font-weight: 500;
+ }
+ @media screen and (max-width:540px) {
+    nav{
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+    nav>h2{
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 700px;
+        text-decoration: underline;
+    }
+    .container1,.container4,.container3,.container5,.ft-div{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .c1-left{
+        text-align: center;
+    }
+    .c1-right img{
+        /* /* width: 100%;  */
+        margin-left: -50px;
+        height: 350px;
+        max-width: 400px;
+        filter: drop-shadow(5px 5px 10px yellow);
+        
+     }
+    .c2-right{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+   
+ }
+ @media screen and (min-width:540px) and (max-width:992px) {
+    .container1,.container4,.container3,.container5,.ft-div{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .c1-left{
+        text-align: center;
+    }
+    .c1-right img{
+        /* /* width: 100%;  */
+        margin-left: -50px;
+        height: 350px;
+        max-width: 400px;
+        filter: drop-shadow(5px 5px 10px yellow);
+        
+     }
+    .c2-right{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  
  }
